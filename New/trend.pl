@@ -1,30 +1,69 @@
 #!/usr/bin/perl
 
 my $file;
-my $prev, $cur, $delta;
+my $prev_cls = 6304;
+my $prev_movement = "Up";
 my @months=(Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec);
 
-$prev = 6301.65;
+#@months=(Jan);
 
 print "\nGenerating Trend... \n\n";
-
+print "Date \t\t  Closing \t  Delta       Movement \t    Trend \n";
+my $dashes = "-" x 72;
+print "$dashes\n";
+		
 for $month (@months) {
 
-	print "\n";
-	$file = "close_$month.txt";
-
-	my %cont;
+	$file = "closing_$month.txt";
 
 	open FILE, $file or die $!;
 
 	while (my $line = <FILE>) {
 		chomp($line);
-		(my $key, my $val) = split / +/, $line;	
-		$cont{$key} = $val;
 		
-		$cur = $val;
-		$delta = int($cur - $prev); 
-		$prev = $cur;
-		print "$key \t $cont{$key} \t $delta \n";
+		my $date, $cur_cls, $cur_movement;
+		
+		($date, $cur_cls) = split / +/, $line;	
+		$delta = int($cur_cls - $prev_cls); 
+		$prev_cls = $cur_cls;
+		
+		$cur_movement = &find_movement($delta);
+		
+		$trend = &find_trend($cur_movement, $prev_movement);
+		$prev_movement = $cur_movement;
+		
+#		print "$date \t $cur_cls \t $delta \t    $cur_movement \t $trend\n";
+
+		printf "\n%-17s %-15s %-11s %-10s %10s", $date, $cur_cls, $delta, $cur_movement, $trend;
 	}
+	
+	print"\n";
+}
+
+sub find_movement {
+		
+		my $del = $_[0];
+		
+		if ($del >= 0) { 
+			$move = "Up";
+		}
+		
+		if ($del < 0) { 
+			$move = "Down";
+		}
+		
+		return $move;
+}
+
+sub find_trend {
+
+	my $cur_mv = $_[0];
+	my $pre_mv = $_[1];
+	
+	if ($cur_mv =~ m/$pre_mv/) {
+		return "Follows";
+	} else {
+		return "Reverse";
+	}
+	
 }
