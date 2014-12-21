@@ -1,50 +1,30 @@
 #!/usr/bin/perl
 
-my %cont, %diff;
-my $file = "close.txt";
+my $file;
 my $prev, $cur, $delta;
+my @months=(Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec);
 
-$prev = 6301;
+$prev = 6301.65;
 
-open FILE, $file or die $!;
+print "\nGenerating Trend... \n\n";
 
-while (my $line = <FILE>) {
-	chomp($line);
-	(my $key, my $val) = split / +/, $line;	
-	$cont{$key} = $val;
-	
-	$cur = $val;
-	$delta = int($cur - $prev); 
-	$diff{$key} = $delta;
-	$prev = $cur;
-}
+for $month (@months) {
 
-print "\nGenerating Trend\n\n";
+	print "\n";
+	$file = "close_$month.txt";
 
-print "Date \t\t Close \t\t Delta \n\n";
+	my %cont;
 
-foreach $key (sort keys %cont) {	
-    print "$key \t $cont{$key} \n";
-}
+	open FILE, $file or die $!;
 
-print "\n";
-
-foreach $key (sort keys %diff) {	
-    print "$key \t $diff{$key} \n";
-}
-
-
-#exit;
-
-print "\n";
-
-$prev = 6301;
-
-foreach $key (sort keys %cont) {
-	
-	$cur = $cont{$key};
-	$diff = int($cur - $prev);
-	$prev = $cur;
-	
-    print "$key \t $cont{$key} \t $diff \n";
+	while (my $line = <FILE>) {
+		chomp($line);
+		(my $key, my $val) = split / +/, $line;	
+		$cont{$key} = $val;
+		
+		$cur = $val;
+		$delta = int($cur - $prev); 
+		$prev = $cur;
+		print "$key \t $cont{$key} \t $delta \n";
+	}
 }
