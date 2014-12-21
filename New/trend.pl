@@ -11,9 +11,10 @@ while (my $line = <FILE>) {
 	$cont{$key} = $val;
 }
 
-@keys = keys(%cont);
-@vals = values(%cont);
+print "\nGenerating Trend\n\n";
+
+print "Date \t\t Close\n\n";
 
 foreach $key (sort keys %cont) {
-    print "$key -> $cont{$key}\n";
+    print "$key \t $cont{$key}\n";
 }

@@ -3,14 +3,15 @@
 ## Header Field (Copy Paste)
 ## "Date",				"Open","		High","			Low","		  Close","	    Shares Traded","	Turnover (Cr)"
 
-month=Nov
-year=2014
+#months=(Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec)
+
+months=(Dec)
 
 echo
 echo "Generating closure data"
-grep $month NIFTY_01-01-2014-21-12-2014.txt | cut -d"\"" -f2,10 | sed "s/\"//" > close.txt
 
-#echo
-#echo "Calculating Difference"
-#echo NA > diff.txt
-#tail close.txt | awk '{print $2}' | awk 'NR-1{print $0-p}{p=$0}' >> diff.txt
+for month in "${months[@]}"
+do
+	grep $month NIFTY_01-01-2014-21-12-2014.txt | cut -d"\"" -f2,10 | sed "s/\"//" > close.txt
+done
+
