@@ -12,6 +12,9 @@ file=NIFTY_22-12-2014-26-12-2014.txt
 
 months=(Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec)
 
+## Current month
+months=(Dec)
+
 echo
 echo "Removing old data..."
 rm closing_*.txt
