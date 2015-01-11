@@ -6,7 +6,9 @@ my $prev_movement = "Up";
 my @months=(Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec);
 
 ## Prev closing
-$prev_cls = 8225.20;
+## $prev_cls = 8225.20;
+
+$prev_cls = 8200.70;
 
 ## Current month
 @months=(Dec);
