@@ -15,11 +15,12 @@ file=NIFTY_01-01-2014-21-12-2014.txt
 
 file=NIFTY_22-12-2014-26-12-2014.txt
 file=NIFTY_27-12-2014-31-12-2014.txt
+file=NIFTY_01-01-2015-11-01-2015.txt
 
 months=(Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec)
 
 ## Current month
-months=(Dec)
+months=(Jan)
 
 echo
 echo "Removing old data..."

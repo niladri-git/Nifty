@@ -1,0 +1,19 @@
+
+Removing old data...
+
+Generating closure data for the month of ...
+
+Jan
+
+Generating Trend... 
+
+Date 		  Closing 	  Delta       Movement 	    Trend 
+------------------------------------------------------------------------
+
+01-Jan-2015       8284.00         1           Up            Follows
+02-Jan-2015       8395.45         111         Up            Follows
+05-Jan-2015       8378.40         -17         Down          Reverse
+06-Jan-2015       8127.35         -251        Down          Follows
+07-Jan-2015       8102.10         -25         Down          Follows
+08-Jan-2015       8234.60         132         Up            Reverse
+09-Jan-2015       8284.50         49          Up            Follows
