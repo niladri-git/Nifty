@@ -8,7 +8,7 @@ my @months=(Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec);
 ## Prev closing
 ## $prev_cls = 8225.20;
 
-$prev_cls = 8282.70;
+$prev_cls = 8284.50;
 
 ## Current month
 @months=(Jan);
