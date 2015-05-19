@@ -8,10 +8,10 @@ my @months=(Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec);
 ## Prev closing
 ## $prev_cls = 8225.20;
 
-$prev_cls = 8284.50;
+$prev_cls = 8181.50;
 
 ## Current month
-@months=(Jan);
+@months=(May);
 
 print "\nGenerating Trend... \n\n";
 print "Date \t\t  Closing \t  Delta       Movement \t    Trend \n";
