@@ -9,6 +9,7 @@ file=NIFTY_01-01-2014-21-12-2014.txt
 ## Replace $prev_cls val in trend.pl
 ## Replace months value in closing.sh and trend.pl
 ## Run find_trend.sh 
+## sh find_trend.sh > Trend_May_2015.txt
 
 file=NIFTY01-05-2015-19-05-2015.txt
 

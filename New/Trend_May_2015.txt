@@ -1,0 +1,24 @@
+
+Removing old data...
+
+Generating closure data for the month of ...
+
+May
+
+Generating Trend... 
+
+Date 		  Closing 	  Delta       Movement 	    Trend 
+------------------------------------------------------------------------
+
+04-May-2015       8331.95         150         Up            Follows
+05-May-2015       8324.80         -7          Down          Reverse
+06-May-2015       8097.00         -227        Down          Follows
+07-May-2015       8057.30         -39         Down          Follows
+08-May-2015       8191.50         134         Up            Reverse
+11-May-2015       8325.25         133         Up            Follows
+12-May-2015       8126.95         -198        Down          Reverse
+13-May-2015       8235.45         108         Up            Reverse
+14-May-2015       8224.20         -11         Down          Reverse
+15-May-2015       8262.35         38          Up            Reverse
+18-May-2015       8373.65         111         Up            Follows
+19-May-2015       8365.65         -8          Down          Reverse
