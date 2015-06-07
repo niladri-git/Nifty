@@ -11,12 +11,14 @@ file=NIFTY_01-01-2014-21-12-2014.txt
 ## Run find_trend.sh 
 ## sh find_trend.sh > Trend_May_2015.txt
 
-file=NIFTY01-05-2015-19-05-2015.txt
+file=NIFTY01-05-2015-07-06-2015.txt
 
 months=(Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec)
 
 ## Current month
-months=(May)
+
+# months=(May)
+months=(Jun)
 
 echo
 echo "Removing old data..."
